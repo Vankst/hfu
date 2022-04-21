@@ -1,0 +1,135 @@
+@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Login page";
+}
+@*——————————No MVCs?—————————————
+⠀⣞⢽⢪⢣⢣⢣⢫⡺⡵⣝⡮⣗⢷⢽⢽⢽⣮⡷⡽⣜⣜⢮⢺⣜⢷⢽⢝⡽⣝
+⠸⡸⠜⠕⠕⠁⢁⢇⢏⢽⢺⣪⡳⡝⣎⣏⢯⢞⡿⣟⣷⣳⢯⡷⣽⢽⢯⣳⣫⠇
+⠀⠀⢀⢀⢄⢬⢪⡪⡎⣆⡈⠚⠜⠕⠇⠗⠝⢕⢯⢫⣞⣯⣿⣻⡽⣏⢗⣗⠏⠀
+⠀⠪⡪⡪⣪⢪⢺⢸⢢⢓⢆⢤⢀⠀⠀⠀⠀⠈⢊⢞⡾⣿⡯⣏⢮⠷⠁⠀⠀
+⠀⠀⠀⠈⠊⠆⡃⠕⢕⢇⢇⢇⢇⢇⢏⢎⢎⢆⢄⠀⢑⣽⣿⢝⠲⠉⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⡿⠂⠠⠀⡇⢇⠕⢈⣀⠀⠁⠡⠣⡣⡫⣂⣿⠯⢪⠰⠂⠀⠀⠀⠀
+⠀⠀⠀⠀⡦⡙⡂⢀⢤⢣⠣⡈⣾⡃⠠⠄⠀⡄⢱⣌⣶⢏⢊⠂⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢝⡲⣜⡮⡏⢎⢌⢂⠙⠢⠐⢀⢘⢵⣽⣿⡿⠁⠁⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠨⣺⡺⡕⡕⡱⡑⡆⡕⡅⡕⡜⡼⢽⡻⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣼⣳⣫⣾⣵⣗⡵⡱⡡⢣⢑⢕⢜⢕⡝⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⣴⣿⣾⣿⣿⣿⡿⡽⡑⢌⠪⡢⡣⣣⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⡟⡾⣿⢿⢿⢵⣽⣾⣼⣘⢸⢸⣞⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠁⠇⠡⠩⡫⢿⣝⡻⡮⣒⢽⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+———————————————————————————*@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <meta name="viewport" content="user-scalable=yes, width=device-width" />
+
+    <title>app</title>
+    <meta name="keywords" content="теги">
+
+    <title>app</title>
+    <meta name="keywords" content="app | че-то там">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="favicon.png">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" Asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/WebApplication2.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/animate.css@ver=7.0.5.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/jquery.fancybox.css@ver=7.0.5.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/mobile.css@ver=7.1.4.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/nouislider.css@ver=7.0.5.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/reset.css@ver=7.0.5.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/slick.css@ver=7.0.5.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/slick-theme.css@ver=7.0.5.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css@ver=7.3.0.css" asp-append-version="true" />
+    <script src="~/js/jquery-1.8.3.min.js?ver=7.0.7" asp-append-version="true"></script>
+    <script src="~/js/maskinput.js?ver=7.0.7" asp-append-version="true"></script>
+    <script src="~/js/slick.min.js?ver=7.0.7" asp-append-version="true"></script>
+    <script src="~/js/jquery.fancybox.js?ver=7.0.7" asp-append-version="true"></script>
+    <script src="~/js/jquery.spincrement.min.js?ver=7.0.7" asp-append-version="true"></script>
+    <script src="~/js/nouislider.min.js?ver=7.0.7" asp-append-version="true"></script>
+    <script src="~/js/wow.min.js?ver=7.0.7" asp-append-version="true"></script>
+    <script src="~/js/scripts.js?ver=7.1.7" asp-append-version="true"></script>
+    <script src="~/js/index.js?ver=7.1.3" asp-append-version="true"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous" asp-append-version="true">
+
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" asp-append-version="true">
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet" asp-append-version="true">
+    <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" asp-append-version="true" />
+    <link href="~/assets/css/plugins.css" rel="stylesheet" type="text/css" asp-append-version="true" />
+    <link href="~/assets/css/authentication/form-2.css?ver=1" rel="stylesheet" type="text/css" asp-append-version="true" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/forms/theme-checkbox-radio.css" asp-append-version="true">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/forms/switches.css" asp-append-version="true">
+    <link href="~/assets/css/elements/infobox.css" rel="stylesheet" type="text/css" asp-append-version="true">
+    <link rel="stylesheet" href="~/css/style.css@ver=7.3.0.css" asp-append-version="true" />
+</head>
+<body class="form">
+    <div class="form-container outer auth-page">
+        <style>
+            body {
+                background-color: #e7f5f1;
+            }
+        </style>
+        <a href="/" class="logo"><img src="../../img/Logo.png"></a>
+        <div class="form-form">
+            <div class="form-form-wrap">
+                <div class="form-container">
+                    <div class="form-content">
+
+                        <h1 class="">Авторизация</h1>
+
+                        <form action="vendor/signin.php" method="post">
+                            <div class="form">
+
+                                <div id="username-field" class="field-wrapper input">
+                                    <div class="d-flex">
+                                        <label for="username">ЛОГИН</label>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                    <input id="username" name="u_login" type="text" class="form-control" placeholder="Логин">
+                                </div>
+
+                                <div id="password-field" class="field-wrapper input mb-2">
+                                    <div class="d-flex justify-content-between">
+                                        <label for="password">ПАРОЛЬ</label>
+                                        <a href="/account/login/forgot-password.php" class="forgot-pass-link">Забыли пароль?</a>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                    </svg>
+                                    <input id="password" name="u_password" type="password" class="form-control" placeholder="Пароль">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="toggle-password" class="feather feather-eye">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="d-sm-flex justify-content-between">
+                                    <div class="field-wrapper">
+                                        <button type="submit" class="btn btn-success" value="" data-brk-library="component__button"><i class="fa fa-check icon-inside icon-inline"></i>ВОЙТИ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <script src="~/assets/js/libs/jquery-3.1.1.min.js" asp-append-version="true"></script>
+    <script src="~/bootstrap/js/popper.min.js" asp-append-version="true"></script>
+    <script src="~/bootstrap/js/bootstrap.min.js" asp-append-version="true"></script>
+    <script src="~/assets/js/authentication/form-2.js" asp-append-version="true"></script>
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+﻿    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@ViewData["Title"] - WebApplication2</title>
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" Asp-append-version="true" />
+
+  <link rel="stylesheet" href="~/WebApplication2.styles.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/css/animate.css@ver=7.0.5.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/css/jquery.fancybox.css@ver=7.0.5.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/css/mobile.css@ver=7.1.4.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/css/nouislider.css@ver=7.0.5.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/css/reset.css@ver=7.0.5.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/css/slick.css@ver=7.0.5.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/css/slick-theme.css@ver=7.0.5.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/css/style.css@ver=7.3.0.css" asp-append-version="true" />
+  <script src="~/js/jquery-1.8.3.min.js?ver=7.0.7" asp-append-version="true"></script>
+  <script src="~/js/maskinput.js?ver=7.0.7" asp-append-version="true"></script>
+  <script src="~/js/slick.min.js?ver=7.0.7" asp-append-version="true"></script>
+  <script src="~/js/jquery.fancybox.js?ver=7.0.7" asp-append-version="true"></script>
+  <script src="~/js/jquery.spincrement.min.js?ver=7.0.7" asp-append-version="true"></script>
+  <script src="~/js/nouislider.min.js?ver=7.0.7" asp-append-version="true"></script>
+  <script src="~/js/wow.min.js?ver=7.0.7" asp-append-version="true"></script>
+  <script src="~/js/scripts.js?ver=7.1.7" asp-append-version="true"></script>
+  <script src="~/js/index.js?ver=7.1.3" asp-append-version="true"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous" asp-append-version="true">
+
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" asp-append-version="true">
+
+  <style>
+    .hc__menu {
+      display: none!important;
+    }
+    
+    .hc__reply__box {
+      display: none!important;
+    }
+    
+    .hc__form {
+      display: none!important;
+    }
+    
+    .hc__footer__r {
+      display: none!important;
+    }
+  </style>
+  <style>
+    .hc__voting__bad {
+      display: none!important;
+    }
+    
+    .hc__voting__minus {
+      display: none;
+    }
+    
+    .hc__message__comment,
+    .hc__avatar {
+      opacity: 1!important;
+    }
+    
+    .hcc.hc__form__send {
+      background: #5068d4;
+    }
+    
+    .hcc.hc__menu__line {
+      background-color: #5068d4;
+    }
+    
+    .hcc.hc__top__unlike .hcc.hc__top__block {
+      font-size: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="preloader">
+    <div class="inner">
+    </div>
+  </div>
+  <div class="main" id="main">
+    <header>
+      <div class="container">
+        <div class="header-blocks">
+          <a href="" class="logo"><img src="img/Logo.png " alt="nameApp\" style="width: 158px;"></a>
+          <div class="header-right">
+
+            <nav class="main-menu">
+              <div class="top-block">
+                <div class="logo">
+                  <img src="img/Logo-white.png" alt="nameApp" style="width: 156px;">
+                </div>
+                <br>
+                <button class="mob-nav-close"></button>
+              </div>
+              <div class="btn-login-group">
+                <a asp-area="" asp-page="/Login" class="btn btn-login">
+                  <i class="far fa-sign-in-alt"></i> Вход
+                </a>
+                <a asp-area="" asp-page="/Login" class="btn btn-login">
+                  <i class="far fa-user-plus"></i> Регистрация
+                </a>
+              </div>
+              <ul class="menu-items">
+                <li class="ico-home"><a href="" class="ico-home">Главная</a></li>
+              
+              </ul>
+              <div class="contacts">
+
+                <div class="item">
+                  <i class="ico-email"></i>
+                  <a href="mailto:support@nameApp.com">support@nameApp.com</a>
+                </div>
+              </div>
+              <div class="socials">
+                <a href="https://vk.com/" target="_blank" class="item vk"></a>
+                <a href="https://t.me/" target="_blank" class="item telegram"></a>
+
+              </div>
+            </nav>
+
+            <button class="btn btn-login">
+              <a asp-area="" asp-page="/Login">
+                <i class="far fa-sign-in-alt"></i> Войти
+              </a>
+              <a asp-area="" asp-page="/Login">
+                <i class="far fa-user-plus"></i> Регистрация
+              </a>
+
+            </button>
+            <a href="#" class="mob-nav">
+              <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H19C19.5523 0 20 0.447715 20 1C20 1.55228 19.5523 2 19 2H1C0.447715 2 0 1.55228 0 1ZM0 7C0 6.44772 0.447715 6 1 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H1C0.447715 8 0 7.55228 0 7ZM1 12C0.447715 12 0 12.4477 0 13C0 13.5523 0.447715 14 1 14H19C19.5523 14 20 13.5523 20 13C20 12.4477 19.5523 12 19 12H1Z" fill="black" />
+              </svg>
+
+            </a>
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="header-fix">
+    <div class="container">
+      <div class="header-blocks">
+        <a href="/" class="logo"><img src="img/Logo-white.png" alt="nameApp" style="width: 156px;"></a>
+        <div class="header-right">
+          <nav>
+            <ul>
+              <li class="ico-home"><a asp-area="" asp-page="/Login" class="ico-home">Главная</a></li>
+              
+            </ul>
+          </nav>
+          <button class="btn btn-login">
+            <a asp-area="" asp-page="/Login">
+              <i class="far fa-sign-in-alt"></i> Войти
+            </a>
+            <a asp-area="" asp-page="/Login">
+              <i class="far fa-user-plus"></i> Регистрация
+            </a>
+
+          </button>
+          <a href="#" class="mob-nav">
+            <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H19C19.5523 0 20 0.447715 20 1C20 1.55228 19.5523 2 19 2H1C0.447715 2 0 1.55228 0 1ZM0 7C0 6.44772 0.447715 6 1 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H1C0.447715 8 0 7.55228 0 7ZM1 12C0.447715 12 0 12.4477 0 13C0 13.5523 0.447715 14 1 14H19C19.5523 14 20 13.5523 20 13C20 12.4477 19.5523 12 19 12H1Z" fill="black" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <style>
+    .hc__menu {
+      display: none!important;
+    }
+    
+    .hc__reply__box {
+      display: none!important;
+    }
+    
+    .hc__form {
+      display: none!important;
+    }
+    
+    .hc__footer__r {
+      display: none!important;
+    }
+  </style>
+  <style>
+    .hc__voting__bad {
+      display: none!important;
+    }
+    
+    .hc__voting__minus {
+      display: none;
+    }
+    
+    .hc__message__comment,
+    .hc__avatar {
+      opacity: 1!important;
+    }
+    
+    .hcc.hc__form__send {
+      background: #5068d4;
+    }
+    
+    .hcc.hc__menu__line {
+      background-color: #5068d4;
+    }
+    
+    .hcc.hc__top__unlike .hcc.hc__top__block {
+      font-size: 0px;
+    }
+  </style>
+
+  <a href="#main" class="totop smoothScroll">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1C8.55228 1 9 1.44772 9 2V15C9 15.5523 8.55228 16 8 16C7.44772 16 7 15.5523 7 15V2C7 1.44772 7.44772 1 8 1Z" fill="white" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 0.292893C7.68342 -0.0976311 8.31658 -0.0976311 8.70711 0.292893L15.7071 7.29289C16.0976 7.68342 16.0976 8.31658 15.7071 8.70711C15.3166 9.09763 14.6834 9.09763 14.2929 8.70711L8 2.41421L1.70711 8.70711C1.31658 9.09763 0.683417 9.09763 0.292893 8.70711C-0.0976311 8.31658 -0.0976311 7.68342 0.292893 7.29289L7.29289 0.292893Z" fill="white" />
+    </svg>
+    <p>Наверх</p>
+  </a>
+  <div class="container">
+      <main role="main" class="pb-3">
+          @RenderBody()
+      </main>
+  </div>
+  <div class=""></div>
+  <style>
+      footer{
+          line-height: 0px;
+      }
+    </style>
+  <footer class="border-top footer text-muted">
+    <div class="container">
+      &copy; 2022 - WebApplication2 - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    </div>
+  </footer>
+
+  <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+  <script src="~/js/site.js" asp-append-version="true"></script>
+
+  @await RenderSectionAsync("Scripts", required: false)
+</body>
+<style>
+  .layers1 {
+    float: left;
+    background: black;
+  }
+</style>
+
+</html>
